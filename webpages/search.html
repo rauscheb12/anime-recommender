@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Anime Recommender - Home</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-toggleable-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Anime Recommender</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./search.html">Search
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./addanime.html">Add an Anime</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <center>
+        <h3>Advanced Search</h3>
+    </center>
+
+    <!-- Title -->
+    <div class="row">
+        <div class="col"></div>
+        <div class="form-group col-10">
+            <label for="anime-name">Title</label>
+            <input type="text" class="form-control" id="anime-name" placeholder="Naruto Shippuden">
+        </div>
+        <div class="col"></div>
+    </div>
+    <!-- Studio -->
+    <div class="row">
+        <div class="col"></div>
+        <div class="form-group col-10">
+            <label for="studio-name">Studio</label>
+            <input type="text" class="form-control" id="studio-name" placeholder="Studio Pierrot">
+        </div>
+        <div class="col"></div>
+    </div>
+    <!-- Type -->
+    <div class="row">
+        <div class="col"></div>
+        <div class="form-group col-10">
+            <label for="type" data-toggle="collapse" data-target="#typediv">Type</label>
+            <div id="typediv" class="collapse">
+            <label class="radio form-control">
+                    <input type="radio" id="type" name="type" value=""> N/A</label>
+            <label class="radio form-control">
+                <input type="radio" id="type" name="type" value="TV"> TV</label>
+            <label class="radio form-control">
+                <input type="radio" id="type" name="type" value="Movie"> Movie</label>
+            <label class="radio form-control">
+                <input type="radio" id="type" name="type" value="OVA"> OVA</label>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+    <!-- Genre -->
+    <div class="row">
+        <div class="col"></div>
+        <div class="form-group col-10">
+            <label for="genre" data-toggle="collapse" data-target="#genrediv">Genre</label>
+            <div id="genrediv" class="collapse">
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="1"> Action</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="2"> Adventure</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="3"> Cars</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="4"> Comedy</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="5"> Dementia</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="6"> Demons</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="7"> Drama</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="8"> Ecchi</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="9"> Fantasy</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="10"> Game</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="11"> Harem</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="12"> Hentai</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="13"> Historical</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="14"> Horror</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="15"> Josei</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="16"> Kids</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="17"> Magic</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="18"> Martial Arts</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="19"> Mecha</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="20"> Military</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="21"> Music</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="22"> Mystery</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="23"> Parody</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="24"> Police</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="25"> Psychological</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="26"> Romance</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="27"> Samurai</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="28"> School</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="29"> Sci-Fi</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="30"> Seinen</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="31"> Shoujo</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="32"> Shoujo Ai</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="33"> Shounen</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="34"> Shounen Ai</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="35"> Slice of Life</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="36"> Space</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="37"> Sports</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="38"> Super Power</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="39"> Supernatural</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="40"> Thriller</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="41"> Vampire</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="42"> Yaoi</label>
+                <label class="checkbox form-control">
+                    <input type="checkbox" id="genre" name="genre" value="43"> Yuri</label>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+    <!-- Submit -->
+    <div class="row">
+        <div class="col"></div>
+        <div class="form-group col-10">
+            <input type="submit" class="btn btn-primary form-control" id="submit-btn" />
+        </div>
+        <div class="col"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
