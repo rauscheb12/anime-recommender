@@ -2,6 +2,9 @@
     include('pdo_connect.php');
     include('model/model.php');
 
+    include('assets/pageheader.html');
+    include('assets/menu.php');
+
     $mode = '';
     if(isset($_REQUEST['mode']))
         $mode = $_REQUEST['mode'];
@@ -24,4 +27,6 @@
             break;
 
     }
+
+    include('assets/pagefooter.html');
 ?>
