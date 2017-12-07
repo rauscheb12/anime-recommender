@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Anime Recommender - Home</title>
+    <title>Anim.mender - Home</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,8 +14,9 @@
 </head>
 
 <body>
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-toggleable-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Anime Recommender</a>
+        <a class="navbar-brand" href="#">Anim.mender</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -28,27 +29,40 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./search.html">Search</a>
+                    <a class="nav-link" href="./addanime.html">Add an Anime</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./addanime.html">Add an Anime</a>
+                    <a class="nav-link" href="./search.html">Advanced Search</a>
                 </li>
             </ul>
         </div>
     </nav>
 
+    <!-- Page Header -->
     <center>
         <h3>Quick Search</h3>
     </center>
 
-    <div class="row">
-        <div class="col"></div>
-        <div class="form-group col-10">
-            <label for="anime-name">Title</label>
-            <input type="text" class="form-control" id="anime-name" placeholder="Naruto Shippuden">
+    <!-- Form -->
+    <form>
+        <!-- Title -->
+        <div class="row">
+            <div class="col"></div>
+            <div class="form-group col-10">
+                <label for="anime-title">Title</label>
+                <input type="text" class="form-control" id="anime-title" placeholder="Title of the anime (e.g. 'Naruto')">
+            </div>
+            <div class="col"></div>
         </div>
-        <div class="col"></div>
-    </div>
+        <!-- Submit -->
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-10">
+                <input type="submit" class="btn btn-primary form-control" id="submit-btn" />
+            </div>
+            <div class="col"></div>
+        </div>
+    </form>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
