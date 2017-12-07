@@ -1,0 +1,15 @@
+#header { padding-bottom: 5px; text-align: center; background-color: #336699; color: #fff;***REMOVED***
+#footer { height: 30px; line-height: 30px; color: #fff;  text-align: center; border-top: 1px solid; margin-top: 20px; background-color: gray;***REMOVED***
+.menu-item {display: inline-block; float: left; width: 100px; ***REMOVED***
+#content {min-height: 400px; ***REMOVED***
+.a-menu {color: #fff;***REMOVED***
+.a-menu:hover { color: #eee; ***REMOVED***
+#item-desc {min-height: 200px; background-color: #f0f0f0; padding: 10px;  margin-bottom: 10px;***REMOVED***
+#outer-box {border: 1px solid;***REMOVED***
+.link{ color: blue;  cursor: pointer***REMOVED***
+.link:hover {text-decoration: underline***REMOVED***
+#banner { width: 100%; ***REMOVED***
+#main { margin: 0; padding: 0;***REMOVED***
+.login-box { margin-top: 30px;***REMOVED***
+thead { background-color: #333; color: #fff; font-weight: bold;  ***REMOVED***
+.duedate { color: red; ***REMOVED***
