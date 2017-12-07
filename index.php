@@ -17,6 +17,9 @@
             include('views/editanime.html');
             break;
         case 'results' :
+            $sql="SELECT * FROM `anime` WHERE anime.type='TV'";
+            $table_data = getAllRecords($sql);
+
             include('views/results.html');
             break;
         case 'search' :
