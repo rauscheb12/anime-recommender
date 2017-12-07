@@ -11,5 +11,4 @@ $db_info='mysql:host=washington.uww.edu; dbname=cs382-2177_rauscheb12';
 ***REMOVED***
 ***REMOVED***
 
-
 ***REMOVED***
