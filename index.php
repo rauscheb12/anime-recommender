@@ -17,10 +17,13 @@
             include('views/editanime.html');
             break;
         case 'results' :
-            $sql="SELECT * FROM `anime` WHERE anime.type='TV'";
+            $sql="SELECT name, type, episodes, score, members
+                FROM `anime`
+                ORDER BY name ASC";
             $table_data = getAllRecords($sql);
+            $labels = array('Title', 'Type', '# of Episodes', 'Score', '# of Members');
 
-            include('views/results.html');
+            include('views/results.php');
             break;
         case 'search' :
             include('views/search.html');
