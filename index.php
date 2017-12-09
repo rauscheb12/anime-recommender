@@ -11,9 +11,11 @@
 
     switch ($mode) {
         case 'addanime' :
-            include('views/addanime.html');
+            echo "<center><h3>Add an Anime</h3></center>";
+            include('views/editanime.html');
             break;
         case 'editanime' :
+            echo "<center><h3>Edit an Anime</h3></center>";
             include('views/editanime.html');
             break;
         case 'results' :
