@@ -45,6 +45,7 @@
             // define column labels
             $labels = array('Anime ID', 'Name', 'Type', 'Episodes', 'Score', 'Members', 'Studio ID', 'MPAA Rating', 'Status', 'Premiere Date');
             
+            include('views/info.php');
             break;
         case 'results' :
             // define sql statement
