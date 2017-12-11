@@ -45,4 +45,28 @@ echo "</div>";
 echo "<div class='col'></div>";
 echo "</div>";
 
+// Update Button
+echo "<div class='row'>";
+echo "<div class='col'></div>";
+echo "<div class='col-10'>";
+echo "<a class='btn btn-success form-control' href='index.php?mode=editanime&anime_id=";
+echo $_GET['anime_id'];
+echo "'>Edit</a>";
+echo "</div>";
+echo "<div class='col'></div>";
+echo "</div>";
+
+echo "<div class='row'></div>";
+
+// Delete button
+echo "<div class='row'>";
+echo "<div class='col'></div>";
+echo "<div class='col-10'>";
+echo "<a class='btn btn-danger form-control' href='index.php?mode=deleteanime&anime_id=";
+echo $_GET['anime_id'];
+echo "'>Delete</a>";
+echo "</div>";
+echo "<div class='col'></div>";
+echo "</div>";
+
 ***REMOVED***
