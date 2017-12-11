@@ -1,7 +1,7 @@
 <!-- Navigation Bar -->
 <div id='nav'>
 <nav class="navbar navbar-toggleable-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Anim.mender</a>
+        <a class="navbar-brand" href="index.php">Anim.mender</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -17,6 +17,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?mode=search">Advanced Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?mode=allanime">All Anime</a>
                 </li>
             </ul>
         </div>

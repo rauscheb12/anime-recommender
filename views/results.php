@@ -21,7 +21,14 @@ if (isset($table_data)){
         $row = $table_data[$i];
         echo "<tr>";
         foreach ($row as $key=>$value){
-            echo "<td> {$value} </td>";
+            if ($key == 'anime_id'){
+                continue;
+            } elseif ($key =='name'){
+                $id = $row['anime_id'];
+                echo "<td><a href='index.php?mode=info&anime_id={$id}'>{$value}</a></td>";
+            } else {
+                echo "<td> {$value} </td>";
+            }
         }
         echo "</tr>";
     }
