@@ -240,9 +240,9 @@ if($_GET['mode'] == 'search'){
             <div class="row">
                 <div class="col"></div>
                 <div class="form-group col-10">
-                    <label for="type">Type</label>
-                    <select class="form-control" name="type">
-                        <option value="-1">-</option>';
+                    <label for="type-search">Type</label>
+                    <select class="form-control" name="type-search">
+                        <option value="">-</option>';
     
         // list all types pulled from the db
         if (isset($type_data)){
@@ -311,23 +311,28 @@ if($_GET['mode'] == 'search'){
         echo '<div class="row">
                 <div class="col"></div>
                 <div class="form-group col-10">
-                    <label for="genre">Genre</label>
+                    <label for="genre-search">Genre</label>
                     <div id="genre-dropdown">';
     
         if($_GET['mode'] == 'editanime'){
-            echo '<select class="form-control" name="genre" disabled>';
+            echo '<select class="form-control" name="genre-search" disabled>';
         }else{
-            echo '<select class="form-control" name="genre">';
+            echo '<select class="form-control" name="genre-search">';
         }
     
-        echo '<option value="-1">-</option>';
+        echo '<option value="">-</option>';
     
         // list all genres pulled from the db
         if (isset($genre_data)){
             for ($i=0; $i<count($genre_data); $i++){
                 $row = $genre_data[$i];
                 foreach ($row as $key=>$value){
-                    echo "<option value='".($i+1)."'>{$value}</option>";
+                    echo "<option value='";
+                    if($i < 9){
+                        echo "0";
+                    } else
+                    echo ($i+1);
+                    echo "'>{$value}</option>";
                 }
             }
         }
