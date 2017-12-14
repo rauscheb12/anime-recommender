@@ -1,8 +1,8 @@
 <?php
 
-$user = 'REPLACE';
-$pass = 'REPLACE';
-$db_info='mysql:host=REPLACE; dbname=REPLACE';
+$user = 'REPLACE USER';
+$pass = 'REPLACE PASS';
+$db_info='mysql:host=REPLACE HOST; dbname=REPLACE DBNAME';
 try {
     $db = new PDO($db_info, $user, $pass);
 
