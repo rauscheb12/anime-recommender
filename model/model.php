@@ -1,13 +1,26 @@
 ***REMOVED***
 function deleteAnime($anime_id){
   global $db;
+
+  // define values for named parameters
+  $values = array(':anime_id'=>$anime_id);
+
   // define SQL statement
   $sql = 'DELETE FROM `anime`
-    WHERE anime_id=:anime_id';
-	// define values for named parameters
-  $values = array(':anime_id'=>$anime_id);
+    WHERE anime_id = :anime_id';
   $stm =$db->prepare($sql);
   $stm->execute($values);
+
+  $sql = 'DELETE FROM `genres`
+    WHERE anime_id = :anime_id';
+  $stm =$db->prepare($sql);
+  $stm->execute($values);
+
+  $sql = 'DELETE FROM `ratings`
+    WHERE anime_id = :anime_id';
+  $stm =$db->prepare($sql);
+  $stm->execute($values);
+
   return true;
 ***REMOVED***
 

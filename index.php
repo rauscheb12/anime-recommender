@@ -34,13 +34,40 @@
             break;
         case 'allanime' :
 
+            // retrieve list of first characters for name
+            $charsql = "SELECT DISTINCT SUBSTRING(name,1,1)
+                FROM `anime`
+                ORDER BY name ASC";
+
+            // retrieve data
+            $char_data = getAllRecords($charsql);
+
+            // set default char
+            $char = 'A';
+
+            // set char to filter if set, otherwise set to first entry of $char_data
+            if(isset($_GET['filter']) && ($_GET['filter'] != '')){
+                $char = $_GET['filter'];
+            ***REMOVED*** else {
+                if($char_data[0] != ''){
+                    $row = $char_data[0];
+                    foreach ($row as $key=>$value){
+                        $char = $value;
+                    ***REMOVED***
+                ***REMOVED***
+            ***REMOVED***
+
             // define sql statement
             $sql="SELECT anime_id, name, type, episodes, score, members
                 FROM `anime`
+                WHERE name LIKE :char
                 ORDER BY name ASC";
+
+            // define values for named parameters
+            $values = array(':char'=>$char.'%');
             
             // retrieve table data
-            $table_data = getAllRecords($sql);
+            $table_data = getAllRecords($sql, $values);
 
             // define column labels
             $labels = array('Title', 'Type', '# of Episodes', 'Score', '# of Members');
@@ -143,13 +170,74 @@
             break;
         case 'results' :
 
-            // define sql statement
-            $sql="SELECT anime_id, name, type, episodes, score, members
-                FROM `anime`
-                ORDER BY name ASC";
+            // define sql statement parts
+            $select = "SELECT `anime`.anime_id, `anime`.name, `anime`.type, `anime`.episodes, `anime`.score, `anime`.members";
+            $from = "FROM `anime`, `genres`";
+            $where = "WHERE `anime`.anime_id = `genres`.anime_id";
+            $order = "ORDER BY name ASC";
+
+            // default name, type, and genre
+            $name = '';
+            $type = '';
+            $genre = '';
+            $values = array();
+
+            // if the 'name' is set
+            if(isset($_POST['name']) && ($_POST['name'] != '')){
+                // set name
+                $name = $_POST['name'];
+
+                // adjust where statement
+                $where = $where." AND `anime`.name LIKE :name";
+
+                // push onto array
+                $values[':name'] = '%'.$name.'%';
+            ***REMOVED***elseif(isset($_POST['name-search']) && ($_POST['name-search'] != '')){
+                // set name
+                $name = $_POST['name-search'];
+                
+                // adjust where statement
+                $where = $where." AND `anime`.name LIKE :name";
+
+                // push onto array
+                $values[':name'] = '%'.$name.'%';
+            ***REMOVED***
+
+            // if the 'type' is set
+            if(isset($_POST['type-search']) && ($_POST['type-search'] != '')){
+                // set name
+                $type = $_POST['type-search'];
+
+                // adjust where statement
+                $where = $where." AND `anime`.type LIKE :type";
+
+                // push onto array
+                $values[':type'] = '%'.$type.'%';
+            ***REMOVED***
+
+            // if the 'type' is set
+            if(isset($_POST['genre-search']) && ($_POST['genre-search'] != '')){
+                // set name
+                $genre = $_POST['genre-search'];
+
+                // adjust where statement
+                $where = $where." AND `genres`.genre_id LIKE :genre";
+
+                // push onto array
+                $values[':genre'] = '%'.$genre.'%';
+            ***REMOVED***
+
+            // finish sql statement
+            $sql = $select." ".$from." ".$where." ".$order;
             
+            // define values for parameters
+            //$values = array(':name'=>'%'.$name.'%', ':type'=>'%'.$type.'%', ':genre'=>'%'.$genre.'%');
+            //$values = array(':name'=>'%'.$name.'%');
+            //$values = array(':type'=>'%'.$type.'%');
+            //$values = array(':genre'=>'%'.$genre.'%');
+
             // retrieve table data
-            $table_data = getAllRecords($sql);
+            $table_data = getAllRecords($sql, $values);
 
             // define column labels
             $labels = array('Title', 'Type', '# of Episodes', 'Score', '# of Members');
