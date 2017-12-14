@@ -1,4 +1,4 @@
-***REMOVED***
+<?php
 function deleteAnime($anime_id){
   global $db;
 
@@ -22,7 +22,7 @@ function deleteAnime($anime_id){
   $stm->execute($values);
 
   return true;
-***REMOVED***
+}
 
 function insertNewAnime($name, $type){
   global $db;
@@ -34,7 +34,7 @@ function insertNewAnime($name, $type){
   $stm =$db->prepare($sql);
   $stm->execute($values);
   return true;
-***REMOVED***
+}
 
 function updateAnime($anime_id, $name, $type){
   global $db;
@@ -47,7 +47,7 @@ function updateAnime($anime_id, $name, $type){
   $stm =$db->prepare($sql);
   $stm->execute($values);
   return true;
-***REMOVED***
+}
 
 function getAllRecords($sql, $data=NULL){
 /* This function can be invoked using 1 or 2 arguments.
@@ -63,7 +63,7 @@ function getAllRecords($sql, $data=NULL){
         $results = $stm->fetchAll(PDO::FETCH_ASSOC);
         // return values
         return $results;
-***REMOVED***
+}
 
 function getOneRecord($sql, $data=NULL){
 /* This function can be invoked using 1 or 2 arguments.
@@ -79,4 +79,4 @@ function getOneRecord($sql, $data=NULL){
         $result = $stm->fetch(PDO::FETCH_ASSOC);
         // return values
         return $result;
-***REMOVED***
+}

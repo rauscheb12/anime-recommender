@@ -1,12 +1,12 @@
-***REMOVED***
+<?php
 
 // page header
 echo "<center><h3>";
 if (isset($table_data) && $table_data['anime_id'] != 0){
     echo $table_data['name'];
-***REMOVED***else{
+}else{
     echo "No Anime Found.";
-***REMOVED***
+}
 echo "</h3></center>";
 
 // fill table
@@ -20,24 +20,24 @@ if (isset($table_data) && $table_data['anime_id'] != 0){
     if(isset($labels)&& count($labels)>0){
         echo "<thead><tr>";
         for ($i=0; $i<count($labels); $i++){
-            echo "<th>{$labels[$i]***REMOVED***</th>";
-        ***REMOVED***
+            echo "<th>{$labels[$i]}</th>";
+        }
         echo "</tr></thead>";
-    ***REMOVED***
+    }
 
     echo "<tbody>";
-    echo "<td>{$table_data['anime_id']***REMOVED***</td>";
-    echo "<td>{$table_data['name']***REMOVED***</td>";
-    echo "<td>{$table_data['type']***REMOVED***</td>";
-    echo "<td>{$table_data['episodes']***REMOVED***</td>";
-    echo "<td>{$table_data['score']***REMOVED***</td>";
-    echo "<td>{$table_data['members']***REMOVED***</td>";
-    echo "<td>{$table_data['studio_id']***REMOVED***</td>";
-    echo "<td>{$table_data['rating']***REMOVED***</td>";
-    echo "<td>{$table_data['status']***REMOVED***</td>";
-    echo "<td>{$table_data['premiered']***REMOVED***</td>";
+    echo "<td>{$table_data['anime_id']}</td>";
+    echo "<td>{$table_data['name']}</td>";
+    echo "<td>{$table_data['type']}</td>";
+    echo "<td>{$table_data['episodes']}</td>";
+    echo "<td>{$table_data['score']}</td>";
+    echo "<td>{$table_data['members']}</td>";
+    echo "<td>{$table_data['studio_id']}</td>";
+    echo "<td>{$table_data['rating']}</td>";
+    echo "<td>{$table_data['status']}</td>";
+    echo "<td>{$table_data['premiered']}</td>";
     echo "</tbody>";
-***REMOVED***
+}
 
 
 echo "</table>";
@@ -69,4 +69,4 @@ echo "</div>";
 echo "<div class='col'></div>";
 echo "</div>";
 
-***REMOVED***
+?>

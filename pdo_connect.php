@@ -1,14 +1,14 @@
-***REMOVED***
+<?php
 
-$user = 'REPLACE';
-$pass = 'REPLACE';
-$db_info='mysql:host=REPLACE; dbname=REPLACE';
-***REMOVED***
-***REMOVED***
+$user = 'REPLACE USER';
+$pass = 'REPLACE PASS';
+$db_info='mysql:host=REPLACE HOST; dbname=REPLACE DBNAME';
+try {
+    $db = new PDO($db_info, $user, $pass);
 
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
+} catch (PDOException $e) {
+    print "Error!: " . $e->getMessage() . "<br/>";
+    die();
+}
 
-***REMOVED***
+?>

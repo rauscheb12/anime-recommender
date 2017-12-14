@@ -1,5 +1,5 @@
 
-***REMOVED***
+<?php
 // ADD ANIME
 if($_GET['mode'] == 'addanime'){
 
@@ -10,9 +10,9 @@ if($_GET['mode'] == 'addanime'){
 
     if($_GET['mode'] == 'search'){
         echo '<div class="col"></div>';
-    ***REMOVED*** else {
+    } else {
         echo '<div class="col" align="right"><font color="red" size="6"> * </font></div>';
-    ***REMOVED***
+    }
 
     echo '<div class="form-group col-10">
                 <label for="name">Title</label>
@@ -33,10 +33,10 @@ if($_GET['mode'] == 'addanime'){
         for ($i=0; $i<count($type_data); $i++){
             $row = $type_data[$i];
             foreach ($row as $key=>$value){
-                echo "<option value='{$value***REMOVED***'>{$value***REMOVED***</option>";
-            ***REMOVED***
-        ***REMOVED***
-    ***REMOVED***
+                echo "<option value='{$value}'>{$value}</option>";
+            }
+        }
+    }
 
     echo '</select>
             </div>
@@ -59,10 +59,10 @@ if($_GET['mode'] == 'addanime'){
         for ($i=0; $i<count($genre_data); $i++){
             $row = $genre_data[$i];
             foreach ($row as $key=>$value){
-                echo "<option value='".($i+1)."'>{$value***REMOVED***</option>";
-            ***REMOVED***
-        ***REMOVED***
-    ***REMOVED***
+                echo "<option value='".($i+1)."'>{$value}</option>";
+            }
+        }
+    }
 
     echo '</select>
                 </div>
@@ -79,7 +79,7 @@ if($_GET['mode'] == 'addanime'){
         </div>
     </form>';
 
-***REMOVED***
+}
 
 // EDIT ANIME
 if($_GET['mode'] == 'editanime'){
@@ -93,9 +93,9 @@ if($_GET['mode'] == 'editanime'){
     
         if($_GET['mode'] == 'search'){
             echo '<div class="col"></div>';
-        ***REMOVED*** else {
+        } else {
             echo '<div class="col" align="right"><font color="red" size="6"> * </font></div>';
-        ***REMOVED***
+        }
     
         echo '<div class="form-group col-10">
                     <label for="name-update">Title</label>
@@ -116,10 +116,10 @@ if($_GET['mode'] == 'editanime'){
             for ($i=0; $i<count($type_data); $i++){
                 $row = $type_data[$i];
                 foreach ($row as $key=>$value){
-                    echo "<option value='{$value***REMOVED***'>{$value***REMOVED***</option>";
-                ***REMOVED***
-            ***REMOVED***
-        ***REMOVED***
+                    echo "<option value='{$value}'>{$value}</option>";
+                }
+            }
+        }
     
         echo '</select>
                 </div>
@@ -136,7 +136,7 @@ if($_GET['mode'] == 'editanime'){
                 </div>
                 <div class="col"></div>
             </div>';
-        ***REMOVED***
+        }
     
         // Score
         if($_GET['mode'] == 'editanime'){
@@ -148,7 +148,7 @@ if($_GET['mode'] == 'editanime'){
                 </div>
                 <div class="col"></div>
             </div>';
-        ***REMOVED***
+        }
     
         // Members
         if($_GET['mode'] == 'editanime'){
@@ -160,7 +160,7 @@ if($_GET['mode'] == 'editanime'){
                 </div>
                 <div class="col"></div>
             </div>';
-        ***REMOVED***
+        }
     
         // Studio
         if($_GET['mode'] == 'editanime'){
@@ -172,7 +172,7 @@ if($_GET['mode'] == 'editanime'){
                 </div>
                 <div class="col"></div>
             </div>';
-        ***REMOVED***
+        }
     
             // Genre
         echo '<div class="row">
@@ -183,9 +183,9 @@ if($_GET['mode'] == 'editanime'){
     
         if($_GET['mode'] == 'editanime'){
             echo '<select class="form-control" name="genre" disabled>';
-        ***REMOVED***else{
+        }else{
             echo '<select class="form-control" name="genre">';
-        ***REMOVED***
+        }
     
         echo '<option value="-1">-</option>';
     
@@ -194,10 +194,10 @@ if($_GET['mode'] == 'editanime'){
             for ($i=0; $i<count($genre_data); $i++){
                 $row = $genre_data[$i];
                 foreach ($row as $key=>$value){
-                    echo "<option value='".($i+1)."'>{$value***REMOVED***</option>";
-                ***REMOVED***
-            ***REMOVED***
-        ***REMOVED***
+                    echo "<option value='".($i+1)."'>{$value}</option>";
+                }
+            }
+        }
     
         echo '</select>
                     </div>
@@ -214,7 +214,7 @@ if($_GET['mode'] == 'editanime'){
             </div>
         </form>';
     
-    ***REMOVED***
+    }
 
     // SEARCH
 if($_GET['mode'] == 'search'){
@@ -226,9 +226,9 @@ if($_GET['mode'] == 'search'){
     
         if($_GET['mode'] == 'search'){
             echo '<div class="col"></div>';
-        ***REMOVED*** else {
+        } else {
             echo '<div class="col" align="right"><font color="red" size="6"> * </font></div>';
-        ***REMOVED***
+        }
     
         echo '<div class="form-group col-10">
                     <label for="name-search">Title</label>
@@ -249,10 +249,10 @@ if($_GET['mode'] == 'search'){
             for ($i=0; $i<count($type_data); $i++){
                 $row = $type_data[$i];
                 foreach ($row as $key=>$value){
-                    echo "<option value='{$value***REMOVED***'>{$value***REMOVED***</option>";
-                ***REMOVED***
-            ***REMOVED***
-        ***REMOVED***
+                    echo "<option value='{$value}'>{$value}</option>";
+                }
+            }
+        }
     
         echo '</select>
                 </div>
@@ -269,7 +269,7 @@ if($_GET['mode'] == 'search'){
                 </div>
                 <div class="col"></div>
             </div>';
-        ***REMOVED***
+        }
     
         // Score
         if($_GET['mode'] == 'editanime'){
@@ -281,7 +281,7 @@ if($_GET['mode'] == 'search'){
                 </div>
                 <div class="col"></div>
             </div>';
-        ***REMOVED***
+        }
     
         // Members
         if($_GET['mode'] == 'editanime'){
@@ -293,7 +293,7 @@ if($_GET['mode'] == 'search'){
                 </div>
                 <div class="col"></div>
             </div>';
-        ***REMOVED***
+        }
     
         // Studio
         if($_GET['mode'] == 'editanime'){
@@ -305,7 +305,7 @@ if($_GET['mode'] == 'search'){
                 </div>
                 <div class="col"></div>
             </div>';
-        ***REMOVED***
+        }
     
             // Genre
         echo '<div class="row">
@@ -316,9 +316,9 @@ if($_GET['mode'] == 'search'){
     
         if($_GET['mode'] == 'editanime'){
             echo '<select class="form-control" name="genre-search" disabled>';
-        ***REMOVED***else{
+        }else{
             echo '<select class="form-control" name="genre-search">';
-        ***REMOVED***
+        }
     
         echo '<option value="">-</option>';
     
@@ -330,12 +330,12 @@ if($_GET['mode'] == 'search'){
                     echo "<option value='";
                     if($i < 9){
                         echo "0";
-                    ***REMOVED*** else
+                    } else
                     echo ($i+1);
-                    echo "'>{$value***REMOVED***</option>";
-                ***REMOVED***
-            ***REMOVED***
-        ***REMOVED***
+                    echo "'>{$value}</option>";
+                }
+            }
+        }
     
         echo '</select>
                     </div>
@@ -352,5 +352,5 @@ if($_GET['mode'] == 'search'){
             </div>
         </form>';
     
-    ***REMOVED***
-***REMOVED***
+    }
+?>

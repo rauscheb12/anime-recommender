@@ -1,4 +1,4 @@
-***REMOVED***
+<?php
     include('pdo_connect.php');
     include('model/model.php');
 
@@ -48,14 +48,14 @@
             // set char to filter if set, otherwise set to first entry of $char_data
             if(isset($_GET['filter']) && ($_GET['filter'] != '')){
                 $char = $_GET['filter'];
-            ***REMOVED*** else {
+            } else {
                 if($char_data[0] != ''){
                     $row = $char_data[0];
                     foreach ($row as $key=>$value){
                         $char = $value;
-                    ***REMOVED***
-                ***REMOVED***
-            ***REMOVED***
+                    }
+                }
+            }
 
             // define sql statement
             $sql="SELECT anime_id, name, type, episodes, score, members
@@ -83,15 +83,15 @@
                     $result = deleteAnime($anime_id);
                     if($result){
                         echo "<center><h3>Anime deletion successful!</h3></center>";
-                    ***REMOVED*** else {
+                    } else {
                         echo "<center><h3>Anime deletion failed!</h3></center>";
-                    ***REMOVED***
-                ***REMOVED*** else {
+                    }
+                } else {
                     echo "Invalid data!";
-                ***REMOVED***
-            ***REMOVED*** else {
+                }
+            } else {
                 echo "Anime ID not specified!";
-            ***REMOVED***
+            }
 
             break;
         case 'editanime' :
@@ -124,7 +124,7 @@
             // get anime_id if it is set
             if(isset($_GET['anime_id'])){
                 $anime_id = $_GET['anime_id'];
-            ***REMOVED***
+            }
 
             // define sql statement
             $sql="SELECT *
@@ -160,12 +160,12 @@
             $result = insertNewAnime($name, $type);
                 if ($result){
                     echo "<center><h3>Anime addition successful!</h3></center>";
-                ***REMOVED*** else {
+                } else {
                     echo "<center><h3>Anime addition failed!</h3></center>";
-                ***REMOVED***
-            ***REMOVED*** else {
+                }
+            } else {
                 echo "Invalid data!";
-            ***REMOVED***
+            }
             
             break;
         case 'results' :
@@ -192,7 +192,7 @@
 
                 // push onto array
                 $values[':name'] = '%'.$name.'%';
-            ***REMOVED***elseif(isset($_POST['name-search']) && ($_POST['name-search'] != '')){
+            }elseif(isset($_POST['name-search']) && ($_POST['name-search'] != '')){
                 // set name
                 $name = $_POST['name-search'];
                 
@@ -201,7 +201,7 @@
 
                 // push onto array
                 $values[':name'] = '%'.$name.'%';
-            ***REMOVED***
+            }
 
             // if the 'type' is set
             if(isset($_POST['type-search']) && ($_POST['type-search'] != '')){
@@ -213,7 +213,7 @@
 
                 // push onto array
                 $values[':type'] = '%'.$type.'%';
-            ***REMOVED***
+            }
 
             // if the 'type' is set
             if(isset($_POST['genre-search']) && ($_POST['genre-search'] != '')){
@@ -225,7 +225,7 @@
 
                 // push onto array
                 $values[':genre'] = '%'.$genre.'%';
-            ***REMOVED***
+            }
 
             // finish sql statement
             $sql = $select." ".$from." ".$where." ".$order;
@@ -286,15 +286,15 @@
                 $result = updateAnime($anime_id, $name, $type);
                     if ($result){
                         echo "<center><h3>Anime update successful!</h3></center>";
-                    ***REMOVED*** else {
+                    } else {
                         echo "<center><h3>Anime update failed!</h3></center>";
-                    ***REMOVED***
-                ***REMOVED*** else {
+                    }
+                } else {
                     echo "Invalid data!";
-                ***REMOVED***
-            ***REMOVED*** else {
+                }
+            } else {
                 echo "Anime ID not specified!";
-            ***REMOVED***
+            }
 
             break;
         default :
@@ -302,7 +302,7 @@
             include('views/default.html');
             break;
 
-    ***REMOVED***
+    }
 
     include('assets/pagefooter.html');
-***REMOVED***
+?>
